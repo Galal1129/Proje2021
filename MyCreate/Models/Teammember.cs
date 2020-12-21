@@ -13,6 +13,11 @@ namespace MyCreate.model
         public string Name { get; set; }
         public string Jop { get; set; }
         public string Image { get; set; }
+        public string twitter { get; set; }
+        public string Facebook { get; set; }
+        public string instagram { get; set; }
+        public string whatsapp { get; set; }
+
 
         [NotMapped]
         public IFormFile File { set; get; }

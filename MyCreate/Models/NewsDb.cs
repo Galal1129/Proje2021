@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MyCreate.model;
+using MyCreate.Models;
 
 namespace MyCreate.model
 {
@@ -19,6 +20,7 @@ namespace MyCreate.model
         public DbSet<News> news { set; get; }
         public DbSet<ContactUs> contactUs { set; get; }
         public DbSet<Teammember> teammembers { set; get; }
+        public DbSet<anahaber> anahaberleri { get; set; }
 
 
     }

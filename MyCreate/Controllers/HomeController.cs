@@ -44,8 +44,18 @@ namespace MyCreate.Controllers
         }
         public IActionResult readmasaj()
         {
-           
             return View(db.contactUs.ToList());
+            
+        }
+        public IActionResult Teammember()
+        {
+
+            return View(db.teammembers.ToList());
+        }
+        public IActionResult anahabers()
+        {
+
+            return View(db.anahaberleri.ToList());
         }
         public IActionResult News(int id)
         {

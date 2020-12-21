@@ -19,7 +19,7 @@ namespace MyCreate.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MyCreate.Models.Categoty", b =>
+            modelBuilder.Entity("MyCreate.model.Categoty", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,27 +34,29 @@ namespace MyCreate.Migrations
                     b.ToTable("categoties");
                 });
 
-            modelBuilder.Entity("MyCreate.Models.ContactUs", b =>
+            modelBuilder.Entity("MyCreate.model.ContactUs", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Message")
+                    b.Property<string>("Email")
                         .IsRequired();
+
+                    b.Property<string>("Message");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(20);
+
+                    b.Property<string>("Phone");
 
                     b.HasKey("Id");
 
                     b.ToTable("contactUs");
                 });
 
-            modelBuilder.Entity("MyCreate.Models.News", b =>
+            modelBuilder.Entity("MyCreate.model.News", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,11 +79,13 @@ namespace MyCreate.Migrations
                     b.ToTable("news");
                 });
 
-            modelBuilder.Entity("MyCreate.Models.Teammember", b =>
+            modelBuilder.Entity("MyCreate.model.Teammember", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Facebook");
 
                     b.Property<string>("Image");
 
@@ -89,14 +93,37 @@ namespace MyCreate.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("instagram");
+
+                    b.Property<string>("twitter");
+
+                    b.Property<string>("whatsapp");
+
                     b.HasKey("Id");
 
                     b.ToTable("teammembers");
                 });
 
-            modelBuilder.Entity("MyCreate.Models.News", b =>
+            modelBuilder.Entity("MyCreate.Models.anahaber", b =>
                 {
-                    b.HasOne("MyCreate.Models.Categoty", "categoty")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("Topic");
+
+                    b.Property<string>("image");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("anahaberleri");
+                });
+
+            modelBuilder.Entity("MyCreate.model.News", b =>
+                {
+                    b.HasOne("MyCreate.model.Categoty", "categoty")
                         .WithMany("News")
                         .HasForeignKey("categoeyId")
                         .OnDelete(DeleteBehavior.Cascade);

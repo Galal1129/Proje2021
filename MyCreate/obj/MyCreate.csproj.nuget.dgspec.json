@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jalla\\OneDrive\\Desktop\\MyCreate\\MyCreate.csproj": {}
+    "C:\\Users\\jalla\\source\\repos\\MyCreate - Copy\\MyCreate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jalla\\OneDrive\\Desktop\\MyCreate\\MyCreate.csproj": {
+    "C:\\Users\\jalla\\source\\repos\\MyCreate - Copy\\MyCreate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jalla\\OneDrive\\Desktop\\MyCreate\\MyCreate.csproj",
+        "projectUniqueName": "C:\\Users\\jalla\\source\\repos\\MyCreate - Copy\\MyCreate.csproj",
         "projectName": "MyCreate",
-        "projectPath": "C:\\Users\\jalla\\OneDrive\\Desktop\\MyCreate\\MyCreate.csproj",
+        "projectPath": "C:\\Users\\jalla\\source\\repos\\MyCreate - Copy\\MyCreate.csproj",
         "packagesPath": "C:\\Users\\jalla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jalla\\OneDrive\\Desktop\\MyCreate\\obj\\",
+        "outputPath": "C:\\Users\\jalla\\source\\repos\\MyCreate - Copy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jalla\\AppData\\Roaming\\NuGet\\NuGet.Config",

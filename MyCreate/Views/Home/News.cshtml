@@ -4,38 +4,38 @@
 }
 @model List<News>
 
-<center>
-    <h1> @ViewBag.name</h1>
 
+<section id="about" class="about">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="section-title">
+            <h2> @ViewBag.name</h2>
+        </div>
+            @foreach (var item in Model)
+            {
+                
+                <div class="section-title">
 
-    <div class="row">
+                    <h5 class="text-info">@item.Title</h5>
+                </div>
 
-        @foreach (var item in Model)
-        {
+                <div class="row">
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <img src="~/img/news/@item.img" width="650" height="450">
+                    </div>
+                    <div class="col-4" data-aos="fade-left">
+                        <h3>@item.Title</h3>
+                        <p class="font-italic">
+                            @item.Date
+                        </p>
 
-        <div class="container">
-          
-            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
-                <img src="~/img/news/@item.img" width="300" height="300" class="rounded-circle" />
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
-                <h1>@item.Title</h1>
-                <h6>@item.Date</h6>
-                <h3>@item.Topic</h3>
-                <p class="font-italic">
-
-                </p>
-                @*// <a class="btn btn-danger" href="/Home/Deletenews/@item.Id">Delete</a>*@
+                        <p style="width:700px">
+                            @item.Topic
+                        </p>
+                    </div>
+                </div>
                 <hr />
-            </div>
-
+                <br />
+            }
         </div>
 
-
-
-        }
-    </div>
-</center>
-   
-
-
+</section>

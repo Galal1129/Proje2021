@@ -1505,7 +1505,13 @@ section {
 .faq .faq-list a.collapse {
   color: #3fbbc0;
 }
-
+.whitebakground{
+    background-color: red;
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
 .faq .faq-list a.collapsed {
   color: #343a40;
 }
@@ -1535,7 +1541,9 @@ section {
   padding: 8px;
   border: 2px dotted #c5ebec;
 }
-
+.webbakground {
+    background-color: rgba(0, 0, 0, .05);
+}
 .contact .info-box h3 {
   font-size: 20px;
   color: #777777;
@@ -1611,7 +1619,7 @@ section {
   font-size: 14px;
 }
 
-.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
   background-color: #3fbbc0;
 }
 
@@ -1797,3 +1805,4 @@ section {
   text-align: center;
   font-size: 13px;
 }
+

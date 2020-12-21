@@ -3,17 +3,17 @@
 
 <head>
     @if (IsSectionDefined("Scripts"))
-    { 
-    @RenderSection("Scripts", false);
+    {
+        @RenderSection("Scripts", false);
     }
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Medicio Bootstrap Template - Index</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>Haber sitesi</title>
+    <link href="~/assets/css/style.css" rel="stylesheet" />
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicons -->
     <link href="~/assets/img/favicon.png" rel="icon">
     <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -58,12 +58,17 @@
 
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href="/home">Home</a></li>
-                        <li><a href="~/Categoties">Categoties</a></li>
-                        <li><a href="~/News">News</a></li>
-                        <li><a href="~/Home/readmasaj">show</a></li>
-                        <li><a href="~/Home/contact">Contact</a></li>
-                        <li><a href="~/Teammembers">Teammembers</a></li>
+                        <li class="active"><a href="/home">Ana sayfa</a></li>
+                        @*<li><a href="~/Categoties">Categoties</a></li>*@
+                        @*<li><a href="~/News">News</a></li>*@
+
+
+
+                        <li><a href="~/Home/Teammember">Takım üyeleri</a></li>
+                        <li><a href="~/Home/contact">Bize Ulaşın</a></li>
+                        <li><a href="~/Home/readmasaj">YORUMLAR</a></li>
+                        <li><a href="~/AdminPanel/default">Admin Panel</a></li>
+
                         <partial name="_LoginPartial" />
                         @*<li><a href="~/Identity/Account/Login" class="btn btn-outline-info">Login</a></li>
         <li><a href="~/Identity/Account/Logout " class="btn btn-outline-dark">Logout</a></li>*@
@@ -93,7 +98,7 @@
             </div>
         </header><!-- End Header -->
     @RenderSection("UpHeader", false);
-    <partial name="_Carsour" />
+    <partial name="_anahabers" />
         <!-- End Hero -->
   
     @RenderBody()
