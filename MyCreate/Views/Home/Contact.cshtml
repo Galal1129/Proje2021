@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+@model ContactUs
+<h1>Yemen</h1>
+
+<form asp-action="allmasaj" method="post" >
+    <div class="container">
+        
+        <div class="form-row">
+            <div class="col-md-4 form-group">
+                <input type="text"  class="form-control" asp-for="Name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 form-group">
+                <textarea type="text" class="form-control" asp-for="Message"  placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"></textarea>
+                <div class="validate"></div>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 form-group">
+                <input type="tel" class="form-control" asp-for="Email" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <div class="validate"></div>
+        </div>
+       
+        <div class="text-center"><button type="submit" style="margin-bottom:20px" class="btn btn-primary">Make an Appointment</button></div>
+    </div>
+</form>

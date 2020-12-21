@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "News";
+}
+@model List<News>
+
+<center>
+    <h1> @ViewBag.name</h1>
+
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+
+        <div class="container">
+          
+            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-right">
+                <img src="~/img/news/@item.img" width="300" height="300" class="rounded-circle" />
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
+                <h1>@item.Title</h1>
+                <h6>@item.Date</h6>
+                <h3>@item.Topic</h3>
+                <p class="font-italic">
+
+                </p>
+                @*// <a class="btn btn-danger" href="/Home/Deletenews/@item.Id">Delete</a>*@
+                <hr />
+            </div>
+
+        </div>
+
+
+
+        }
+    </div>
+</center>
+   
+
+
